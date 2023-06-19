@@ -1,4 +1,4 @@
-package org.demo;
+package org.demo.view;
 
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
