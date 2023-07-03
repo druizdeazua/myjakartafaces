@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:f="jakarta.faces.core"
+<html lang="en" 
+	xmlns:f="jakarta.faces.core"
 	xmlns:h="jakarta.faces.html">
 <h:head>
-	<title>Hello, World!</title>
+	<title>Hello World</title>
 </h:head>
 <h:body>
+	<h1>Hello World</h1>
 	<h:form>
-		<h:outputLabel for="name" value="Enter your name" required="true" />
-		<h:inputText id="name" value="#{hello.name}" />
-		<h:message for="name" />
-		<br />
-		<h:commandButton value="Say hello" action="#{hello.createMessage}">
-			<f:ajax execute="@form" render="@form" />
+		<h:outputLabel for="input" value="Input" />
+		<h:inputText id="input" value="#{helloWorld.input}" />
+		<h:commandButton value="Submit" action="#{helloWorld.submit}">
+			<f:ajax execute="@form" render=":output" />
 		</h:commandButton>
-		<br />
-            #{hello.message}
-        </h:form>
+	</h:form>
+	<h:outputText id="output" value="#{helloWorld.output}" />
 </h:body>
 </html>
